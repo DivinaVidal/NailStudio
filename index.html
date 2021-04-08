@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+    <title>NAIL STUDIO</title>
+    <style>
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 45%;
+        }
+        .navbar {
+            overflow: hidden;
+            position: fixed;
+            padding: auto;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            border-bottom: double #ffe6ff;
+            -webkit-box-shadow:0px 3px 3px gray;
+            -moz-box-shadow:0px 3px 3px gray;
+            box-shadow:0px 3px 3px gray;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: black;
+            text-decoration: none; /* Remove underline from links */
+            padding: 8px 8px;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #ffe6ff;
+        }
+
+        .navbar a.active {
+          color: black;
+          border: 1px dotted #7a0099;
+          border-color: #ffe6ff;
+        }
+
+        .social-media {
+            font-family: 'Redressed', cursive;
+            padding-left: 20px;
+        }
+
+        .fa {
+          padding: 10px;
+          font-size: 15px;
+          width: 15px;
+          text-align: center;
+          text-decoration: none;
+          margin: 2.5px 1px;
+          border-radius: 50%;
+          color: #ffe6ff;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .home-text {
+            padding: 16px;
+            margin-top: 30px;
+            height: 200px;
+            background-image: url("logo.png");
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-size: auto;
+        }
+
+        @media not|only screen and (max-width: 900px) {
+        .home-text {
+
+        }
+        }
+
+        .menu2 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+            background-image: url("spray1.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto;
+        }
+
+        .menu2 a {
+            padding-right: 10px;
+            color: black;
+            text-decoration: none;
+
+        }
+
+        .menu2 a:hover {
+            background-color: #ffe6ff;
+        }
+        //css for slides
+        .mySlides {display: none}
+    img {vertical-align: middle;}
+
+    /* Slideshow container */
+    .works-container {
+      //max-width: 1000px;
+      position: relative;
+      margin: auto;
+      text-align: center;
+      font-family: Verdana, sans-serif; margin:0;
+    }
+
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: #ffe6ff;
+    }
+
+    /* Fading animation */
+    .works {
+      -webkit-animation-name: works;
+      -webkit-animation-duration: 1.5s;
+      animation-name: works;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes works {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    @keyframes works {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+
+    h3 {
+        font-family: "Brush Script MT", cursive;
+        font-size: 45px;
+        color: #e6ccff;
+    }
+
+    </style>
+</head>
+<body>
+<br />
+    <div class="navbar">
+            <a href="#" class="active">HOME |</a>
+            <a href="studio.html"> DESIGN STUDIO |</a>
+            <a href="#"> CONTACT</a>
+            <a style="float: right;" href="#"> Sign Up</a>
+            <a style="float: right;" href="#">Login |</a>
+    </div>
+<br/>
+    <div class="home-text">
+        <p>Welcome to Nail Studio, a platform you can use to design your own nail art.</p>
+        You can choose from different nail shapes and colors, as well as jewels and glitter.</p>
+        If you choose to make your design a reality, you can get your nail art delivered to you! </p>
+        With your order, you will receive a set of press-on/glue-on nail kit, with your design!</p>
+    </div>
+    <div class="works-container">
+        <h3>How it Works?</h3>
+        <p class="mySlides first">First, choose a nail shape and size.</p>
+        <p class="mySlides">Then decorate your nails using the available colors.</p>
+        <p class="mySlides">Once you are done, if you have created an account, you can save your nail designs to your profile.</p>
+        <p class="mySlides">If you want to purchase a set of nails with your design you may do so from your profile.</p>
+        <p class="mySlides">For your first order, you will receive a cute custom box containing your nails.<br/>
+        The box is large enough to store at least three sets of nails.<br/>
+        After your first order, you will receive your nail set in a bag designed to prevent your nails from chipping/breaking.
+    </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <br/>
+    <div class="menu2">
+        <a href="#">START DESIGNING</a>
+        <a href="#">GET INSPIRED</a>
+        <a href="#">INVITE YOUR FRIENDS</a>
+        <a href="#">INSPIRE OTHERS</a>
+    </div>
+<footer class="social-media">
+    Share or Rate:
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    <a href="#" class="fa fa-pinterest"></a>
+</footer>
+
+
+
+<script>
+
+//doesnt work this is supposed to dynamically set the active class name
+    jQuery(document).ready(function() {
+  var url = window.location;
+  jQuery('ul.nav a[href="' + url + '"]').parent().addClass('active');
+  jQuery('ul.nav a').filter(function() {
+    return this.href == url;
+  }).parent().addClass('nav-path-selected');
+});
+
+//for slides
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
