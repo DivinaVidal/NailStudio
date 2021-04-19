@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -35,6 +36,7 @@
             text-decoration: none; /* Remove underline from links */
             padding: 8px 8px;
             text-align: center;
+            font-variant: unicase;
         }
 
         .navbar a:hover {
@@ -45,6 +47,32 @@
           color: black;
           border: 1px dotted #7a0099;
           border-color: #ffe6ff;
+        }
+
+        .navbar .icon {
+            display: none;
+        }
+        //for responsive nav bar
+        @media screen and (max-width: 1080px) {
+          .navbar a:not(:first-child) {display: none;}
+          .navbar a.icon {
+            float: right;
+            display: block;
+          }
+        }
+
+        @media screen and (max-width: 1080px) {
+          .navbar.responsive {position: relative;}
+          .navbar.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .navbar.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
         }
 
         .social-media {
@@ -71,23 +99,27 @@
             padding: 16px;
             margin-top: 30px;
             height: 200px;
-            background-image: url("logo.png");
+            background-image: url("images/logo.png");
             background-repeat: no-repeat;
-            background-position: right top;
+            background-position: right;
             background-size: auto;
+            font: message-box;
+            font-variant: all-petite-caps;
         }
 
-        @media not|only screen and (max-width: 900px) {
-        .home-text {
-
-        }
+        @media (max-width: 1080px) {
+            .home-text {
+                background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("images/logo.png");
+                background-repeat: no-repeat;
+                background-position: right top;
+            }
         }
 
         .menu2 {
             padding-top: 20px;
             padding-bottom: 20px;
             text-align: center;
-            background-image: url("spray1.png");
+            background-image: url("images/spray1.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: auto;
@@ -104,8 +136,12 @@
             background-color: #ffe6ff;
         }
         //css for slides
-        .mySlides {display: none}
-    img {vertical-align: middle;}
+        .mySlides {
+        display: none;
+        }
+        img {
+            vertical-align: middle;
+        }
 
     /* Slideshow container */
     .works-container {
@@ -177,19 +213,22 @@
 </head>
 <body>
 <br />
-    <div class="navbar">
-            <a href="#" class="active">HOME |</a>
-            <a href="studio.html"> DESIGN STUDIO |</a>
-            <a href="#"> CONTACT</a>
-            <a style="float: right;" href="#"> Sign Up</a>
-            <a style="float: right;" href="#">Login |</a>
+    <div class="navbar" id="myTopNav">
+        <a href="#" class="active">HOME |</a>
+        <a href="studio.html"> DESIGN STUDIO |</a>
+        <a href="#"> CONTACT</a>
+        <a style="float: right;" href="#"> Sign Up</a>
+        <a style="float: right;" href="#">Login |</a>
+        <a href="javascript:void(0);" class="icon" onclick="navResponsive()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
 <br/>
     <div class="home-text">
         <p>Welcome to Nail Studio, a platform you can use to design your own nail art.</p>
-        You can choose from different nail shapes and colors, as well as jewels and glitter.</p>
-        If you choose to make your design a reality, you can get your nail art delivered to you! </p>
-        With your order, you will receive a set of press-on/glue-on nail kit, with your design!</p>
+        <p>You can choose from different nail shapes and colors, as well as jewels and glitter.</p>
+        <p>If you choose to make your design a reality, you can get your nail art delivered to you! </p>
+        <p>With your order, you will receive a set of press-on/glue-on nail kit, with your design!</p>
     </div>
     <div class="works-container">
         <h3>How it Works?</h3>
@@ -236,6 +275,16 @@
     return this.href == url;
   }).parent().addClass('nav-path-selected');
 });
+
+//for the responsive nav bar
+function navResponsive() {
+  var x = document.getElementById("myTopNav");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
 
 //for slides
 var slideIndex = 1;
