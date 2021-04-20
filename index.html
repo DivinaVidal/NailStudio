@@ -37,6 +37,7 @@
             padding: 8px 8px;
             text-align: center;
             font-variant: unicase;
+            font-weight: bold;
         }
 
         .navbar a:hover {
@@ -52,16 +53,18 @@
         .navbar .icon {
             display: none;
         }
-        //for responsive nav bar
-        @media screen and (max-width: 1080px) {
-          .navbar a:not(:first-child) {display: none;}
-          .navbar a.icon {
-            float: right;
-            display: block;
-          }
+        @media screen and (max-width: 1050px) {
+            .navbar a:not(:first-child) {display: none;}
+            .navbar a.icon {
+                float: right;
+                display: block;
+            }
+            .navbar i {
+                color: black;
+            }
         }
 
-        @media screen and (max-width: 1080px) {
+        @media screen and (max-width: 1050px) {
           .navbar.responsive {position: relative;}
           .navbar.responsive .icon {
             position: absolute;
@@ -78,6 +81,7 @@
         .social-media {
             font-family: 'Redressed', cursive;
             padding-left: 20px;
+            font-weight: bold;
         }
 
         .fa {
@@ -107,7 +111,7 @@
             font-variant: all-petite-caps;
         }
 
-        @media (max-width: 1080px) {
+        @media (max-width: 1050px) {
             .home-text {
                 background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("images/logo.png");
                 background-repeat: no-repeat;
@@ -135,7 +139,6 @@
         .menu2 a:hover {
             background-color: #ffe6ff;
         }
-        //css for slides
         .mySlides {
         display: none;
         }
@@ -145,7 +148,6 @@
 
     /* Slideshow container */
     .works-container {
-      //max-width: 1000px;
       position: relative;
       margin: auto;
       text-align: center;
@@ -207,6 +209,7 @@
         font-family: "Brush Script MT", cursive;
         font-size: 45px;
         color: #e6ccff;
+        -webkit-text-stroke: 1px black;
     }
 
     </style>
@@ -266,15 +269,6 @@
 
 
 <script>
-
-//doesnt work this is supposed to dynamically set the active class name
-    jQuery(document).ready(function() {
-  var url = window.location;
-  jQuery('ul.nav a[href="' + url + '"]').parent().addClass('active');
-  jQuery('ul.nav a').filter(function() {
-    return this.href == url;
-  }).parent().addClass('nav-path-selected');
-});
 
 //for the responsive nav bar
 function navResponsive() {
